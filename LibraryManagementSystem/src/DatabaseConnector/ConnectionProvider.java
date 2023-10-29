@@ -13,8 +13,9 @@ public class ConnectionProvider {
 			   
 			 Class.forName ("com.mysql.cj.jdbc.Driver");
 			   final String JDBC_URL = "jdbc:mysql://localhost:3306/lms?characterEncoding=utf8";
-			
-			 Connection con=DriverManager.getConnection(JDBC_URL,"root","root");
+				final String username="root";
+				final String password="root";
+			 Connection con=DriverManager.getConnection(JDBC_URL,username,password);
 			 
 			// return DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
 			 return con;
